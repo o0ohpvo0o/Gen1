@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,5 +16,10 @@ namespace USA_Scanner
         {
             InitializeComponent();
         }
+
+        public void ChangeModuleTo<T>() where T: XtraUserControl
+        {
+
+        } 
     }
 }
