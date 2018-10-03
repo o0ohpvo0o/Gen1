@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>F:\Library\lib\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>F:\Library\lib\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
@@ -49,7 +52,13 @@
     <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>F:\Library\lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OmegaLib">
+      <HintPath>F:\Library\lib\OmegaLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -61,6 +70,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="thanhps42">
+      <HintPath>F:\Library\lib\thanhps42.dll</HintPath>
+    </Reference>
+    <Reference Include="thanhps42.BvSsh">
+      <HintPath>F:\Library\lib\thanhps42.BvSsh.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -75,10 +90,27 @@
     <Compile Include="HomeModule\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeModule\HomeStatic.cs" />
+    <Compile Include="HomeModule\PersonalDetails.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingModule\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingModule\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeModule\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -90,6 +122,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SettingModule\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,7 +141,6 @@
   <ItemGroup>
     <Folder Include="AboutModule\" />
     <Folder Include="ProxyModule\" />
-    <Folder Include="SettingModule\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
